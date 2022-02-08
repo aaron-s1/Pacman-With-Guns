@@ -1,0 +1,24 @@
+<Sprites/Sounds>
+"Unity 2D Pac-Man Tutorial" by noobtuts
+Source: https://noobtuts.com/unity/2d-pacman-game
+
+<Particles>
+"Effect textures and prefabs" by Magicpot Inc.
+Source: Asset Store
+
+<Enemy Gun>
+"Modern Guns: Handgun" by Nokobot
+Source: Asset Store
+
+<collectible cherry>
+"FOOD free" by Sev_4
+Source: Asset Store
+
+<top boundary material>
+"Ice Materials" by IndieChest
+Source: Asset Store
+
+
+
+game made by Aaron S.
+

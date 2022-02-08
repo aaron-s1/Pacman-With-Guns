@@ -1,0 +1,11 @@
+Small variant of Pacman. 
+
+Game loop is simple:
+- Dodge bullets shot by ghost
+- Use larger orbs to create cover which deletes bullets
+- Extra life also creates cover; game does not backtrack
+- Collect all orbs without dying to win
+
+
+
+made by Aaron S.
