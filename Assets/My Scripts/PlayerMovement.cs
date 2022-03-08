@@ -24,12 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update() =>  MoveInput();
 
-    void FixedUpdate() {
-        // if (canApplyMovement && !touchingBoundary) {
-            player.transform.position += transform.right * moveSpeed * Time.deltaTime;
-            // SetMovementSpeed(originalMoveSpeed);            
-        // }
-    }
+    void FixedUpdate() => player.transform.position += transform.right * moveSpeed * Time.deltaTime;
 
 
     void MoveInput() {
@@ -47,12 +42,6 @@ public class PlayerMovement : MonoBehaviour
 
             else if (Input.GetKeyDown("down"))
                 player.transform.localEulerAngles = new Vector3(0, 0, 270);
-
-            // else if (canApplyMovement) {
-            //     // Debug.Log("else if canApplyMovement = " + canApplyMovement);
-            //     player.transform.position += transform.right * Time.deltaTime * moveSpeed;
-            //     SetMovementSpeed(originalMoveSpeed);
-            // }
         }
     }
 
@@ -69,41 +58,28 @@ public class PlayerMovement : MonoBehaviour
                 
                 if (speedWasSetUsingInput)
                     StartCoroutine(ReapplyMovementAfterOneFrame());
-
-                // SetMovementSpeed(originalMoveSpeed);
-                //     StartCoroutine(ReapplyMovementAfterOneFrame());
-                // else StopCoroutine(ReapplyMovementAfterOneFrame());
-                // Debug.Log("speed 0 and apply" + canApplyMovement);
             }
         }
     }
 
  
     IEnumerator ReapplyMovementAfterOneFrame() {
-        // yield return new WaitForEndOfFrame();
         yield return new WaitUntil(() => canApplyMovement);
         SetMovementSpeed(originalMoveSpeed);
     }
 
 
     void OnTriggerEnter(Collider boundary) {
-        if (boundary.gameObject.tag == "boundary") {
-            // if (gameObject.tag == "MovementStopper")
+        if (boundary.gameObject.tag == "boundary")
             moveSpeed = 0;
-            // canApplyMovement = false;
-        }
     }
 
     
 
     void OnTriggerExit(Collider boundary) {
         if (boundary.gameObject.tag == "boundary") {            
-            // if (gameObject.tag == "MovementStopper") {
-                if (!touchingBoundary)
-                    moveSpeed = originalMoveSpeed;
-            // canApplyMovement = true;
-            // SetMovementSpeed(originalMoveSpeed);
-            // }
+            if (!touchingBoundary)
+                moveSpeed = originalMoveSpeed;
         }
     }
 
@@ -113,9 +89,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.UpArrow) ||
                 Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.DownArrow) ) {
                     initialInputTriggered = true;
-                    moveSpeed = originalMoveSpeed;
-                    // SetMovementSpeed(originalMoveSpeed, true);
-                    // canApplyMovement = true;
+                    moveSpeed = originalMoveSpeed;                    
             }
         }
     }
