@@ -47,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     public void SetMovementSpeed(float newSpeed, bool speedWasSetUsingInput = false) {
+        // if (!PauseGame.paused) {
         if (moveSpeed != newSpeed && !PauseGame.paused) {
             moveSpeed = newSpeed;
 

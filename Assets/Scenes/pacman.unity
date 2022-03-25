@@ -30236,6 +30236,11 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4198578605664092324, guid: b6b4b8c473ea0fa4cbd9b4b60405518f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4459899835394005008, guid: b6b4b8c473ea0fa4cbd9b4b60405518f,
         type: 3}
       propertyPath: m_TagString
@@ -30250,6 +30255,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347700383262714596, guid: b6b4b8c473ea0fa4cbd9b4b60405518f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.00005
       objectReference: {fileID: 0}
     - target: {fileID: 7004417404451763846, guid: b6b4b8c473ea0fa4cbd9b4b60405518f,
         type: 3}
