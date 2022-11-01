@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
             SetScreenText(mainScreen, "You lose :(");
             acceptingMovementInput = false;
             player.GetComponentInChildren<PlayerMovement>().SetMovementSpeed(0);                        
-        }        
+        }
     }
 
     void RestartOnGameOver() {
@@ -166,6 +166,8 @@ public class GameManager : MonoBehaviour
     }
 
     public void SetScreenText(GameObject screen, string replacementText, bool setState = true) {
+        if (screen == null)
+            return;
         if (screen.GetComponent<TextMeshPro>().text != replacementText)
             screen.GetComponent<TextMeshPro>().text = replacementText;
 
